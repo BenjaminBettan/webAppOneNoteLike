@@ -1,0 +1,17 @@
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:70.0) Gecko/20100101 Firefox/70.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Cache-Control: max-age=0
+Content-type: application/json
+
+{
+	"firstName": "tata",
+	"lastName": "tataLastName",
+	"twitter": "tata_twitter",
+	"bio": "ceci est la super bio de tata!"
+
+}

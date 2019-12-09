@@ -8,5 +8,3 @@ Etape 1
 Ajout de code dans la classe HomeControler
 localhost:8080 -> Hello toto
 Changement pour se rapprocher de la video -> https://youtu.be/P55DGb258gY
-
-
