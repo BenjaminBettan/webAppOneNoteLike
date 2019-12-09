@@ -6,9 +6,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.boot.test.TestRestTemplate;
 import org.springframework.boot.test.WebIntegrationTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.web.client.RestTemplate;
 
 import demo.DemoApplication;
 
@@ -23,7 +23,7 @@ public class HomeControlerIntegrationTest {
 	@Test
 	public void runHomeController() {
 		String url = "http://localhost:" + port +"/";
-		String body = new RestTemplate().getForObject(url, String.class);
+		String body = new TestRestTemplate("hero","hero").getForObject(url, String.class);
 		assertThat(body, is("Hello toto"));
 	}
 
