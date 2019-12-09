@@ -10,19 +10,19 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import demo.DemoApplication;
-import demo.domain.Speaker;
-import demo.domain.SpeakerRepository;
+import demo.domain.page.Page;
+import demo.domain.page.PageRepository;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = DemoApplication.class)
-public class SpeakerRepositoryTest {
+public class PageRepositoryTest {
 
 	@Autowired
-	private SpeakerRepository repository;
+	private PageRepository repository;
 	
 	@Test
-	public void testFindByTwitter() throws Exception{
-		Speaker benjamin = repository.save(new Speaker("Benjamin", "Bettan", "benjamin_bettan"));
-		assertThat(repository.findByTwitter("benjamin_bettan").getId(), is(benjamin.getId()));
+	public void testFindByTitrePage() throws Exception{
+		Page cettePage = repository.save(new Page("titrePage"));
+		assertThat(repository.findByNomPage("titrePage").getId(), is(cettePage.getId()));
 	}
 }

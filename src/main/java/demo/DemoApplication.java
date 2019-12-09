@@ -13,6 +13,7 @@ public class DemoApplication {
 
 	@Configuration
 	static class SecurityConfig extends GlobalAuthenticationConfigurerAdapter{
+		
 		@Override
 		public void init(AuthenticationManagerBuilder auth) throws Exception {
 			auth.inMemoryAuthentication()
@@ -22,6 +23,7 @@ public class DemoApplication {
 				.and()
 				.withUser("hero").password("hero").roles("USER","HERO");
 		}
+		
 	}
 	
 	public static void main(String[] args) {
